@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Helsinki';
+    src: url(helsinki.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background-color: black;
+}
+
+.page__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 25px
+}
+
+.page__heading{
+    color: white;
+    text-align: top;
+    font-family: 'Helsinki';
+    font-size: 36px;
+    padding: 5px;
+}
+
+.page__description{
+    color: white;
+    text-align: top;
+    font-family: 'Helsinki';
+    font-size: 24px;
+    padding: 5px;
+}
+
+.page__calculator{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator{
+    font-family: 'Helsinki';
+    background-color: rgb(255, 196, 68);
+    border-radius: 20px;
+    max-width: 500px;
+    overflow: hidden;
+}
+
+#display{
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 5rem;
+    text-align: right;
+    border: none;
+    background-color: rgb(251, 174, 21);
+    
+}
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5px;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    width: 100px;
+    width: 100px;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: orange;
+    transition: all 0.3s ease
+}
+
+button:active {
+    background-color: rgb(255, 211, 130);
+    transition: all 0.3s ease
+}
+
+.operator__button{
+    background-color: rgb(133, 86, 0);
+}
+
+.operator__button:hover{
+    background-color: rgba(0, 0, 0, 0.729)
+}
+
+.operator__button:active{
+    background-color: rgba(0, 0, 0, 0.397)
+}
+
+
+
+
