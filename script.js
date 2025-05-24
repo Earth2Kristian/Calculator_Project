@@ -46,6 +46,9 @@ function calculate(){
 
         display.value = display.value.replace(/In\(([^)]+)\)/g, "Math.log($1)"); // In
 
+        // Handling finding a power of a number
+        display.value = display.value.replace(/e\^(\d+)/g, "Math.pow(Math.E,$1)");
+
 
         display.value = eval(display.value);
     }
