@@ -8,6 +8,11 @@
     src: url(KOMIKAX_.ttf);
 }
 
+@font-face {
+    font-family: 'ComicRelief';
+    src: url(ComicRelief.ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -68,7 +73,7 @@ body{
     width: 100%;
     padding: 20px;
     color: white;
-    font-family: 'KOMIKAX';
+    font-family: 'ComicRelief';
     font-size: 30px;
     text-align: right;
     border: none;
@@ -96,7 +101,7 @@ button {
     background-color: black;
     border: none;
     color: white;
-    font-family: 'KOMIKAX';
+    font-family: 'ComicRelief';
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -127,6 +132,51 @@ button:active {
     background-color: rgba(0, 0, 0, 0.397)
 }
 
+.page__audio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 
+.page__credits{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 
+}
 
+.page__credits__music{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__credits_helsinki{
+    display: flex;
+    font-family: 'Helsinki';
+    text-decoration: underline;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__credits_helsinki:hover{
+    text-decoration: underline;
+    color: orange;
+    transition: all 0.3s ease
+}
+
+.page__credits_comic{
+    display: flex;
+    font-family: 'ComicRelief';
+    text-decoration: underline;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__credits_comic:hover{
+    text-decoration: underline;
+    color: orange;
+    transition: all 0.3s ease
+}

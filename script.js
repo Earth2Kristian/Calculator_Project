@@ -1,4 +1,7 @@
-const display = document.getElementById("display")
+const display = document.getElementById("display");
+
+const clickFont = document.getElementById("font_helsinki");
+const clickFont2 = document.getElementById("font_comic");
 
 
 function appendToDisplay(input){
@@ -44,7 +47,7 @@ function calculate(){
         // Handling log and In functions
         display.value = display.value.replace(/log\(([^)]+)\)/g, "Math.log10($1)"); // log
 
-        display.value = display.value.replace(/In\(([^)]+)\)/g, "Math.log($1)"); // In
+        display.value = display.value.replace(/ln\(([^)]+)\)/g, "Math.log($1)"); // In
 
         // Handling finding a power of a number
         display.value = display.value.replace(/e\^(\d+)/g, "Math.pow(Math.E,$1)");
@@ -58,3 +61,11 @@ function calculate(){
     }
 
 }
+
+clickFont.addEventListener ('click', () => {
+    window.location.href = "https://www.fontsquirrel.com/fonts/helsinki"
+})
+
+clickFont2.addEventListener ('click', () => {
+    window.location.href = "https://www.fontsquirrel.com/fonts/comic-relief"
+})
