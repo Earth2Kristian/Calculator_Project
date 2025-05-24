@@ -32,8 +32,19 @@ function calculate(){
         display.value = display.value.replace(/tan\(([^)]+)\)/g, "Math.tan($1 * Math.PI / 180)"); // tan
 
         // Handling PI
-        display.value = display.value.replace(/π/g, "Math.PI");
+        display.value = display.value.replace(/π/g, "Math.PI"); 
 
+        // Handling the sin, cos and tan functions (inverted)
+        display.value = display.value.replace(/sin-1\(([^)]+)\)/g, "Math.asin($1) * 180 / Math.PI"); // sin-1
+
+        display.value = display.value.replace(/cos-1\(([^)]+)\)/g, "Math.acos($1) * 180 / Math.PI"); // cos-1
+
+        display.value = display.value.replace(/tan-1\(([^)]+)\)/g, "Math.atan($1) * 180 / Math.PI"); // tan-1
+
+        // Handling log and In functions
+        display.value = display.value.replace(/log\(([^)]+)\)/g, "Math.log10($1)"); // log
+
+        display.value = display.value.replace(/In\(([^)]+)\)/g, "Math.log($1)"); // In
 
 
         display.value = eval(display.value);
